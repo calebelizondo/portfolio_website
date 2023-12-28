@@ -9,7 +9,7 @@ const Resume: React.FC = () => {
 
   return (
     <>
-        <button onClick={downloadResume}>Download Resume</button>
+        here is my resume
     </>
   );
 };

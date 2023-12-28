@@ -1,3 +1,5 @@
+import "./Contact.css"
+
 const Contact: React.FC = () => {
 
     return(

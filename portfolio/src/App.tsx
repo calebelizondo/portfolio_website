@@ -1,21 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './Home/Navbar';
 import Home from './Home/Home';
 import Resume from './Resume/Resume';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
+import Navbar from './Home/Navbar';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <div className='app-container'>
+      <Navbar />
+      <div className="resume-container">
+        <Resume />
+      </div>
+      <div className="projects-container">
+        <Projects />
+      </div>
+      <div className="contact-container">
+        <Contact />
+      </div>
+    </div>
   );
 }
 
