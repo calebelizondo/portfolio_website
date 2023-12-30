@@ -1,0 +1,41 @@
+.navbar-container {
+    width:50%; 
+    height: 100vh; 
+    display: inline-block;
+}
+
+.navbar-nav {
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    margin-top: 30%;
+    margin-left: 10%;
+}
+
+.navbar-nav li {
+    list-style: none;
+    font-size: 60px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.navbar-nav a {
+    position: relative;
+    text-decoration: none;
+    color: #000; 
+}
+  
+.navbar-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000; 
+    transition: width 0.3s;
+}
+  
+.navbar-nav a:hover::after {
+    width: 100%;
+}

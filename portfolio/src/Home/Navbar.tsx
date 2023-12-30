@@ -5,12 +5,27 @@ import './Navbar.css';
 const Navbar: React.FC = () => {
 
   return (
-    <nav>
-      <ul>
-        <a href='#section1'>Go to section 1</a>
-      </ul>
+    <div className="navbar-container" id="navbar">
+      <nav className='navbar-nav'>
+        <ul>
+          <li>
+            <a href='#navbar'>Caleb Elizondo</a>
+          </li>
+          <li>
+            <a href='#resume'>Resume</a>
+          </li>
+          <li>
+            <a href='#projects'>Projects</a>
+          </li>
+          <li>
+            <a href='#contact'>Contact</a>
+          </li>
+        </ul>
     </nav>
-  );
+  
+
+    </div>
+    );
 };
 
 export default Navbar;

@@ -5,9 +5,10 @@ import Navbar from "./Navbar";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className='home-container'>
       <Navbar />
-    </div>);
+    </div>
+  );
 };
 
 export default Home;
