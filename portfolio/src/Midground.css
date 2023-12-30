@@ -1,0 +1,11 @@
+.midground-container {
+    height: 100%;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 10%;
+    background-image: url("./assets/calebcutout.jpg");
+    background-repeat: no-repeat;
+    background-size:  contain;
+    background-position: center;
+    z-index: -1;
+}                                                           
