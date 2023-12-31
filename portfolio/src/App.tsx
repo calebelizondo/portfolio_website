@@ -12,11 +12,11 @@ function App() {
 
 
   const [{offset}, set] = useSpring(() => ({offset: 0})); 
-  const midcalc = (o: number) => `translateY(${o * 0.3}px)`;
+  const midcalc = (o: number) => `translateY(${o * 0.2}px)`;
   const backcalc = (o: number) => `translateY(${o * 0.1}px)`;
 
   const handleScroll = () => {
-    const offset = window.pageYOffset;
+    const offset = window.scrollY;
     set({offset});
   }
 

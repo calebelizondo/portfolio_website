@@ -4,3 +4,7 @@
     align-items: left;
     justify-content: center;
 }
+
+.app-container {
+    width:100%;
+}

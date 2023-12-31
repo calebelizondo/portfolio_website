@@ -22,7 +22,7 @@
 .navbar-nav a {
     position: relative;
     text-decoration: none;
-    color: #000; 
+    color:  	#0c2d35;
 }
   
 .navbar-nav a::after {
@@ -31,11 +31,11 @@
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
-    background: #000; 
+    height: 3px;
+    background: #0c2d35; 
     transition: width 0.3s;
 }
   
 .navbar-nav a:hover::after {
-    width: 100%;
+    width: 110%;
 }

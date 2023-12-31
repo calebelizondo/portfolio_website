@@ -1,3 +1,23 @@
 * {
   font-family: 'Quicksand', 'sans-serif';
 }
+
+.light-blue {
+  background-color: #169086;
+}
+
+.dark-blue {
+  background-color:	#0d494d;
+}
+
+.turquise {
+  background-color:	#0d494d;
+}
+
+.light-brown {
+  background-color: #fbdfa5;
+}
+
+.transparent {
+  opacity: .8;
+}

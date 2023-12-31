@@ -9,9 +9,6 @@ const Navbar: React.FC = () => {
       <nav className='navbar-nav'>
         <ul>
           <li>
-            <a href='#navbar'>Caleb Elizondo</a>
-          </li>
-          <li>
             <a href='#resume'>Resume</a>
           </li>
           <li>
