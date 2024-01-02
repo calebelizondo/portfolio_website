@@ -1,15 +1,18 @@
-const Resume: React.FC = () => {
+import './Resume.css';
 
-  const downloadResume = () => {
-    const link = document.createElement('a');
-    link.download = 'resume.pdf';
-    link.href = '/resume.pdf';
-    link.click();
-  }
+const Resume: React.FC = () => {
 
   return (
     <>
-        here is my resume
+        <h1>Education</h1>
+        <div className='light-brown section-container'>
+          pdfsdfsdf
+        </div>
+        <h1>Work Experience</h1>
+        <h1>Skills</h1>
+        <div className='light-brown section-container'>
+          
+        </div>
     </>
   );
 };

@@ -1,4 +1,5 @@
 import Home from './Home/Home';
+import About from './About/About';
 import Resume from './Resume/Resume';
 import Projects from './Projects/Projects';
 import Contact from './Contact/Contact';
@@ -42,8 +43,12 @@ function App() {
         <Midground />
       </animated.div>
 
+      <Home />
+
       <div className='foreground-container'>
-        <Home />
+        <div className="about-container" id="about">
+          <About />
+        </div>
         <div className="resume-container" id="resume">
           <Resume />
         </div>

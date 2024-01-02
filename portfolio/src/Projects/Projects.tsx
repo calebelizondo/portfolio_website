@@ -1,7 +1,9 @@
+import Dashboard from "./Grade-dashboard/Dashboard";
+
 const Projects:React.FC = () => {
   return (
     <div>
-        These are my projects
+      <Dashboard />
     </div>
   );
 };

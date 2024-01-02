@@ -1,0 +1,18 @@
+.input-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: left;
+    align-items:left;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    font-size: 16px;
+}
