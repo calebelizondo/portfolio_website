@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Course } from "./Dashboard";
 
-interface InputProps {
-    onCourseChange: (course: Course) => void;
+interface CourseSelectProps {
+    onCourseChange: (course: Course | null) => void;
 }
 
-const Input: React.FC<InputProps> = ({ onCourseChange }) => {
+const CourseSelect: React.FC<CourseSelectProps> = ({ onCourseChange }) => {
     const [subjectCodes, setSubjectCodes] = useState<string[]>([]);
     const [courseNums, setCourseNums] = useState<string[]>([]);
     const [selectedSubject, setSelectedSubject] = useState<string>("");
@@ -29,23 +29,29 @@ const Input: React.FC<InputProps> = ({ onCourseChange }) => {
                 .then(data => {
                     setCourseNums(data.sort());
                 })
-                .catch(error => console.error('Error fetching data:', error));
+            .catch(error => console.error('Error fetching course codes:', error));
         }
     }, [selectedSubject]);
 
     function handleSubjectChange(event: React.ChangeEvent<HTMLSelectElement>) {
         setSelectedSubject(event.target.value);
+        setSelectedCourse(""); // Reset selectedCourse when subject changes
+
+        // Reset the course options when subject changes
+        setCourseNums([]);
+        onCourseChange(null);
     }
 
     function handleCourseChange(event: React.ChangeEvent<HTMLSelectElement>) {
         const course = event.target.value;
         setSelectedCourse(course);
+
         // Send selected course to parent component
-        onCourseChange(new Course(selectedSubject, selectedCourse));
+        onCourseChange(new Course(selectedSubject, course));
     }
 
     return (
-        <div className="input-container">
+        <div className="course-selection-container">
             <label>Choose a subject code</label>
             <select id="subject-select" value={selectedSubject} onChange={handleSubjectChange}>
                 <option value="">Select a subject</option>
@@ -64,4 +70,4 @@ const Input: React.FC<InputProps> = ({ onCourseChange }) => {
     );
 };
 
-export default Input;
+export default CourseSelect;
