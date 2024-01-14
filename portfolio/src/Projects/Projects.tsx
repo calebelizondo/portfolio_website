@@ -3,7 +3,8 @@ import Dashboard from "./Grade-dashboard/Dashboard";
 const Projects:React.FC = () => {
   return (
     <div>
-      <Dashboard />
+        <h1>Projects</h1>
+        <Dashboard />
     </div>
   );
 };

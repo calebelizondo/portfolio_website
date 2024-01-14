@@ -8,6 +8,7 @@ interface InstructorSelectorProps {
 
 const InstructorSelect:React.FC<InstructorSelectorProps> = ({ instructors, addInstructor, removeInstructor }) => {
     
+    //handles check and uncheck of instructor
     const instructorCheckHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
         const instructorName = event.target.parentElement?.textContent;
         if (instructorName && instructors) {

@@ -1,7 +1,8 @@
-import './Dashboard.css';
-import Input from './CourseSelect';
+import { useState, useEffect } from 'react';import './Dashboard.css';
+import CourseSelect from './CourseSelect';
 import InstructorSelect from './InstructorSelect';
-import { useState, useEffect } from 'react';
+import GradeDistDisplay from './GradeDistDisplay';
+import CourseEvalDisplay from './CourseEvalDisplay';
 
 export class Course {
   subjectCode: string;
@@ -16,18 +17,22 @@ export class Course {
 export class Instructor {
   name: string;
   GPA: number;
+  evalResponses: number[][] | null;
+
   gradeDistribution: {
-    A: number;
-    B: number;
-    C: number;
-    D: number;
-    F: number;
+    a: number;
+    b: number;
+    c: number;
+    d: number;
+    f: number;
   };
 
-  constructor(name: string, GPA: number, gradeDistribution: { A: number; B: number; C: number; D: number; F: number; }) {
-    this.GPA = GPA;
-    this.gradeDistribution = gradeDistribution;
-    this.name = name;
+  constructor(name: string, GPA: number, gradeDistribution: { a: number; b: number; c: number; d: number; f: number; }, 
+      evalResponses: number[][] | null = null) {
+      this.GPA = GPA;
+      this.gradeDistribution = gradeDistribution;
+      this.name = name;
+      this.evalResponses = evalResponses;
   }
 }
 
@@ -48,10 +53,8 @@ const Dashboard = () => {
           const formattedInstructors: Instructor[] = data.map((instructorData: any) => {
             // Extract data and create Instructor objects
             const { professor, average_gpa, grade_distribution } = instructorData;
-            const { A, B, C, D, F } = grade_distribution;
-
             // Create new Instructor object and push to the list
-            return new Instructor(professor, average_gpa, { A, B, C, D, F });
+            return new Instructor(professor, average_gpa, grade_distribution);
           });
 
           // Update state with formatted instructors
@@ -65,6 +68,17 @@ const Dashboard = () => {
   }, [selectedCourse]); 
 
   function addInstructor(instructor: Instructor) {
+    // Fetch eval responses before adding instructor
+    fetch(`https://gradedashboardtamu.onrender.com/get_evals/${selectedCourse?.subjectCode}/${selectedCourse?.courseNumber}/${instructor.name}`)
+      .then(response => response.json())
+        .then(data => {
+          instructor.evalResponses = data.eval_answers;
+        })
+          .catch(error => {
+              console.error('Error fetching evals:', error);
+        }
+      );
+
     if (selectedInstructors == null) {
       setSelectedInstructors([instructor]);
       return;
@@ -80,16 +94,15 @@ const Dashboard = () => {
     setSelectedInstructors(selectedInstructors.filter(i => i.name !== instructor.name));
   }
 
-  console.log("formattedInstructors: ", instructors);
-  console.log("selectedInstructors: ", selectedInstructors);
-
   return (
-        <>
+        <div className='dashboard-container'>
           <div className='input-container'>
-            <Input onCourseChange={setSelectedCourse} />
+            <CourseSelect onCourseChange={setSelectedCourse} />
             <InstructorSelect instructors={instructors} addInstructor={addInstructor} removeInstructor={removeInstructor}/>
           </div>
-        </>
+          <GradeDistDisplay instructors={selectedInstructors} />
+          <CourseEvalDisplay instructors={selectedInstructors} />
+        </div>
     );
 };
 
