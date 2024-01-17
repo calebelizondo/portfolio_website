@@ -39,3 +39,15 @@
 .navbar-nav a:hover::after {
     width: 110%;
 }
+
+.foreground-container {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+.foreground-container section-title {
+    text-align: left;
+}
