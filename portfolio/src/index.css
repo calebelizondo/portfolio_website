@@ -28,12 +28,11 @@
 
 .section-container {
   border-radius: 30px;
-  padding: 20px;
+  padding: 40px;
   width: 65vw;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
   margin: 5px;
+  align-items: center;
+  align-content: center;
 }
 
 .foreground-container h1 {
@@ -46,7 +45,8 @@
   margin-top: 10px;
   text-decoration: underline;
   text-align: left;
-  
+  align-content: left;
+  align-self: left;
 }
 
 .icon-container-small {
@@ -54,7 +54,7 @@
   height: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
 }
 
 a {

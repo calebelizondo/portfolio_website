@@ -2,7 +2,6 @@ import Home from './Home/Home';
 import About from './About/About';
 import Resume from './Resume/Resume';
 import Projects from './Projects/Projects';
-import Contact from './Contact/Contact';
 import Midground from './Midground';
 import Background from './Background';
 import { useSpring, animated } from 'react-spring';
@@ -54,9 +53,6 @@ function App() {
         </div>
         <div className="projects-container" id="projects">
           <Projects />
-        </div>
-        <div className="contact-container" id="contact">
-          <Contact />
         </div>
       </div>
     </div>
