@@ -1,10 +1,13 @@
-
+import "./Projects.css";
 
 const Projects:React.FC = () => {
   return (
-    <div>
-        <h1>Projects</h1>
-        <iframe src="https://gradeexplorertamuapp-frontend.onrender.com/"></iframe>
+    <div className='light-brown section-container'>
+        <h1 className="section-title">Projects</h1>
+
+        <div className="frame-container">
+          <iframe src="https://gradeexplorertamuapp-frontend.onrender.com/" seamless></iframe>
+        </div>
     </div>
   );
 };

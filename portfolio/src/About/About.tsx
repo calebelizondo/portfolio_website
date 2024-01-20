@@ -1,7 +1,12 @@
+import headshot from '../assets/headshot.jpg';
+
 const About = () => {
     return (
         <>
             <div className="section-container light-brown">
+                <div className="headshot-container">
+                    <img className="headshot" src={headshot} alt="headshot" />
+                </div>
                 <h1 className="section-title">About me</h1>
                 <div className="icon-container-small">
                     <a href="tel:+12547224412"><i className="fas fa-phone small-icon"></i></a>

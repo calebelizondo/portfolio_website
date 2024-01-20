@@ -27,12 +27,16 @@
 }
 
 .section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
   border-radius: 30px;
-  padding: 40px;
+  padding: 70px;
   width: 65vw;
   margin: 5px;
   align-items: center;
   align-content: center;
+  margin-bottom: 100px;
 }
 
 .foreground-container h1 {
@@ -63,6 +67,26 @@ a {
 }
 
 .small-icon {
-  font-size: x-large;
-  padding: 5px;
+  font-size: xx-large;
+  padding: 10px;
 }
+
+.headshot-container {
+  width: 20vw; 
+  height: 20vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.headshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+p{
+  font-size: 1.3rem;
+  text-align: center;
+ padding: 20px;
+}
+
