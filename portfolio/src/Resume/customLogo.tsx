@@ -1,28 +1,28 @@
+// Logo.tsx
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
-import { useDrag } from 'react-use-gesture';
+import { useInView } from 'react-intersection-observer';
 
 interface LogoProps {
-  id: number;
   source: string;
   alt: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ id, source, alt }) => {
-  const [{ x }, set] = useSpring(() => ({ x: 0 }));
+const Logo: React.FC<LogoProps> = ({ source, alt }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
 
-  const bind = useDrag(({ down, movement: [mx] }) => {
-    set({ x: down ? mx : 0 });
+  const logoAnimation = useSpring({
+    marginLeft: inView ? '0%' : '-100%',
+    opacity: inView ? 1 : 0,
+    config: { duration: 150 },
   });
 
   return (
-    <animated.img
-      {...bind()}
-      key={id}
-      src={source}
-      alt={alt}
-      style={{ transform: x.to((val) => `translate3d(${val}px, 0, 0)`) }}
-    />
+    <animated.div ref={ref} style={logoAnimation} className="logo-container">
+      <img src={source} alt={alt} style={{ maxWidth: '100%', maxHeight: '100%', height: 'auto' }} />
+    </animated.div>
   );
 };
 

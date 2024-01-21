@@ -1,0 +1,4 @@
+.logo-container-large {
+    display: flex;
+    flex-direction: row;
+}

@@ -3,7 +3,7 @@ import headshot from '../assets/headshot.jpg';
 const About = () => {
     return (
         <>
-            <div className="section-container abt-color">
+            <div className="section-container light-brown">
                 
                 <h1 className="section-title">About me</h1>
                 <div className="headshot-container">

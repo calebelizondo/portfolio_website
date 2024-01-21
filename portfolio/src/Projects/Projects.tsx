@@ -12,7 +12,7 @@ const Projects:React.FC = () => {
           </p>
           <p>
             The project is a full-stack web application build with React, Django, and PostgreSQL. The 
-            front end is hosted <a href="https://gradeexplorertamuapp-frontend.onrender.com/">here</a>. The 
+            front end is hosted on <a href="https://gradeexplorertamuapp-frontend.onrender.com/">render</a>. The 
             data is publicly available and can be found here, and was used under the provided Creative Commons liscence. 
             The source code can be found on my github page or at this link. 
           </p>
