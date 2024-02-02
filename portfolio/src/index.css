@@ -2,28 +2,39 @@
   font-family: 'Quicksand', 'sans-serif';
 }
 
-.light-blue {
-  background-color: #169086;
+.timberwolf {
+  background-color: #D8CCC2ff;
 }
 
-.dark-blue {
-  background-color:	#0d494d;
+.wenge {
+  background-color:	#584F4Fff;
 }
 
-.turquise {
-  background-color:	#0d494d;
+.silver {
+  background-color: #B6AEA8ff;
 }
 
-.light-brown {
-  background-color: #ffeac0;
+.copper {
+  background-color: #B47B4Eff;
 }
 
-.grey {
-  background-color: #e8e8e8;
+.night {
+  background-color: #0C0A0Bff;
 }
+
+/*
+
+copper: #B47B4Eff;
+silver: #B6AEA8ff;
+night: #0C0A0Bff;
+wenge: #584F4Fff;
+timberwolf: #D8CCC2ff;
+
+*/
+
 
 .transparent {
-  opacity: .6;
+  opacity: .8;
 }
 
 .abt-color {
@@ -98,4 +109,5 @@ p{
   text-align: center;
   padding: 20px;
 }
+
 
