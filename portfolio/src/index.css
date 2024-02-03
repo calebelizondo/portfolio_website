@@ -2,6 +2,11 @@
   font-family: 'Quicksand', 'sans-serif';
 }
 
+.portfolio-body {
+  width: "100vw";
+  overflow-x: hidden;
+}
+
 .timberwolf {
   background-color: #D8CCC2ff;
 }
