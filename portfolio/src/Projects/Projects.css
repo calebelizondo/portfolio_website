@@ -13,3 +13,7 @@ iframe {
     border-radius: 30px;
     overflow: hidden;
 }
+
+#grade-dist-iframe {
+    overflow: hidden;
+}

@@ -1,6 +1,28 @@
+import { useEffect } from "react";
 import "./Projects.css";
 
 const Projects:React.FC = () => {
+
+  useEffect(() => {
+    function resizeIframe(event: MessageEvent) {
+      if (event.origin === "https://gradeexplorertamuapp-frontend.onrender.com") {
+        const iframe = document.getElementById("grade-dist-iframe") as HTMLIFrameElement;
+        if (iframe) {
+          iframe.style.height = event.data.height + "px";
+        }
+      }
+    }
+
+    const iframe = document.getElementById("grade-dist-iframe") as HTMLIFrameElement;
+    if (iframe) {
+      window.addEventListener("message", resizeIframe);
+
+      return () => {
+        window.removeEventListener("message", resizeIframe);
+      };
+    }
+  }, []);
+
   return (
     <div className='proj-color section-container'>
         <h1 className="section-title">A&M Grade Explorer</h1>
@@ -18,7 +40,7 @@ const Projects:React.FC = () => {
           </p>
         </div>
         <div className="frame-container">
-          <iframe src="https://gradeexplorertamuapp-frontend.onrender.com/" seamless></iframe>
+          <iframe id="grade-dist-iframe" src="https://gradeexplorertamuapp-frontend.onrender.com/" seamless></iframe>
         </div>
     </div>
   );
