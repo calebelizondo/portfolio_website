@@ -7,14 +7,14 @@ const Projects:React.FC = () => {
         <div>
           <p>
             The A&M Grade Explorer allows students to view grade distributions for any course at Texas A&M.
-            The dashboard allows the user to select a specific course and select instructors to compare grade distriubutions and courser
+            The dashboard allows the user to select a specific course and select instructors to compare grade distriubutions and course
             evaluation results against each other. This allows students to make informed decisions about which courses to take and which to drop.
           </p>
           <p>
             The project is a full-stack web application build with React, Django, and PostgreSQL. The 
-            front end is hosted on <a href="https://gradeexplorertamuapp-frontend.onrender.com/">render</a>. The 
+            front end is hosted on <a href="https://gradeexplorertamuapp-frontend.onrender.com/">Render</a>. The 
             data is publicly available and can be found here, and was used under the provided Creative Commons liscence. 
-            The source code can be found on my github page or at this link. 
+            The source code can be found on my Github page or at this <a href="https://github.com/calebelizondo/gradeExplorerTAMUApp">link</a>. 
           </p>
         </div>
         <div className="frame-container">

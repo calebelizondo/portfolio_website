@@ -6,19 +6,11 @@ const Resume: React.FC = () => {
     <>
       <div className='silver section-container'>
         <h1 className="section-title">Resume</h1>
-        <h2 className="subsection-title">Frameworks</h2>
-        <div className="logo-container-large">            
-          <Logo source="django.png" alt="django logo" />
-          <Logo source="logo512.png" alt="react logo" />
-          <Logo source="postgres.png" alt="postgresql logo" />
+        <div className="resume-text-container">
+          <h2 className="subsection-title">Education</h2>
+          <h2 className="subsection-title">Experience</h2>
+          <h2 className="subsection-title">Skills</h2>
         </div>
-        <hr className="my-5" /> 
-        <h2 className="subsection-title">Languages</h2>
-        <div className='logo-container-large'>
-          <Logo source="python-logo.png" alt="python logo" />
-        </div>
-
-        <a href="resume.pdf" className="download-link"><h2>Download full resume</h2></a>
       </div>
     </>
   );

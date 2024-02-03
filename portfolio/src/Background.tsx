@@ -7,6 +7,7 @@ const Background: React.FC = () => {
 
         <div style={{marginTop: '5%'}} className='rect timberwolf transparent'></div>
         <div style={{marginTop: '30%', marginLeft: '10%'}} className='rect wenge transparent'>
+
         </div>
       </div>
     </>

@@ -31,7 +31,7 @@ function App() {
   return (
   <div onScroll={handleScroll} >                                            
 
-    <div className="parent-container">
+    <div className="app-container">
 
       <animated.div style={{ zIndex: -2, position: 'absolute', top: 0, width: '100%', height: '100vh', transform: offset.to(backcalc) }}>
         <Background />
