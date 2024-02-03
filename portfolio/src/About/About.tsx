@@ -29,7 +29,7 @@ const About = () => {
                     I am currently looking for a summer internship in software development. I have experience working 
                     on both the back and front end of web applications with Javascript, Java, Python, C++, CSS, HTML, 
                     SQL and more. I also enjoy working in React, Typescript, and Django. In my coursework I am also learning 
-                    about scientific programming in MatLab and spatial intellegence.
+                    about scientific programming in MatLab and Machine Learning.
                 </p>
                 <p>
                     While I am confident in my technical skills, I believe what makes me unique is my leadership experience and 'soft' skills.

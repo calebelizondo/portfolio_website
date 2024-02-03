@@ -1,7 +1,21 @@
-
+h2 {
+    text-align: left;
+    margin: 10px;
+} 
 
 .resume-text-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
+
+    align-content: center;
+    width: 100%;
+
+}
+
+#download-resume-button {
+    margin: 20px;
+    width: 20vw;
+    height: 5vh;
+    border-radius: 40px;
 }
