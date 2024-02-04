@@ -25,8 +25,7 @@ const Resume: React.FC = () => {
     <>
       <div className='silver section-container'>
         <h1 className="section-title">Resume</h1>
-        <div className="resume-text-container">
-          <h2 className="subsection-title">Education &mdash;</h2>
+          <h2 className="subsection-title">&mdash; Education &mdash;</h2>
               <div className='flex-row-div'>
                 <img src="/tamu.png" alt="Texas A&M logo" id="tamu-logo" />
                   <div style= {{ paddingLeft: '30px', paddingRight: '30px'}}>
@@ -43,11 +42,27 @@ const Resume: React.FC = () => {
                   </div>
               </div>
 
-          <h2 className="subsection-title">Experience &mdash;</h2>
-          <h2 className="subsection-title">Skills &mdash;</h2>
-        </div>
+          <h2 className="subsection-title">&mdash; Experience &mdash;</h2>
+            <a href="https://csweb.rice.edu/academics/undergraduate-programs/opportunities/reu-data-science">
+              <div className="flex-row-div">
+                <img src="https://www.rice.edu/sites/g/files/bxs2566/files/2019-08/Rice_University_Horizontal_Blue.svg" alt="Rice University logo" />
+                <p>
+                  <i>Data Science Researcher</i>
+                  <br />
+                    Participated in REU program funded by Google in collaboration with A&M and Rice.
+                </p>
+              </div>
+            </a>
 
-        <div>
+            <div className="flex-row-div">
+              <img style={{ width: "60%"}} src="https://thebatt.com/wp-content/uploads/2024/01/Untitled-1-1.png" alt="The Battalion logo" />
+              <p style={{width: '40%'}}>
+                <i>Managing Editor</i><br />
+                Manage editorial staff for Texas A&M's independent student newspaper.
+              </p>            
+            </div>
+
+        <div style={{ paddingTop: '20px'}}>
           <button id="download-resume-button" onClick={handleDownload}>Download Full Resume</button>
           <button id="download-transcript-button" onClick={handleDownloadTranscript}>Download Transcript</button>
         </div>
