@@ -16,7 +16,7 @@
 }
 
 .silver {
-  background-color: #B6AEA8ff;
+  background-color: rgb(189, 189, 189);
 }
 
 .copper {
@@ -114,5 +114,3 @@ p{
   text-align: center;
   padding: 20px;
 }
-
-

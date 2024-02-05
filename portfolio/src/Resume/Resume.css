@@ -47,6 +47,7 @@ i {
     padding-inline: 20px;
     padding-block: 20px;
     justify-content: center;
+    align-items: center;
 }
 
 #download-transcript-button {
@@ -54,4 +55,13 @@ i {
     width: 15vw;
     height: 5vh;
     border-radius: 40px;
+}
+
+#resume-content a:hover {
+    color: #4b4b4b;
+    text-decoration: none;
+}
+
+#resume-content button {
+    background-color: #D8CCC2ff;
 }

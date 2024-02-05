@@ -23,14 +23,14 @@ const Resume: React.FC = () => {
 
   return (
     <>
-      <div className='silver section-container'>
-        <h1 className="section-title">Resume</h1>
+      <div id="resume-content" className='silver section-container'>
           <h2 className="subsection-title">&mdash; Education &mdash;</h2>
               <div className='flex-row-div'>
                 <img src="/tamu.png" alt="Texas A&M logo" id="tamu-logo" />
                   <div style= {{ paddingLeft: '30px', paddingRight: '30px'}}>
                   <i>Texas A&M University </i> <br></br>
                     Bachelor of Science in Computer Science <br></br>
+                    Emphasis in Data Science <br />
                     Fall 2021 - Spring 2025 <br></br>
                     GPA:  3.68
                   </div>
@@ -52,16 +52,18 @@ const Resume: React.FC = () => {
                     Participated in REU program funded by Google in collaboration with A&M and Rice.
                 </p>
               </div>
+
             </a>
 
-            <div className="flex-row-div">
-              <img style={{ width: "60%"}} src="https://thebatt.com/wp-content/uploads/2024/01/Untitled-1-1.png" alt="The Battalion logo" />
-              <p style={{width: '40%'}}>
-                <i>Managing Editor</i><br />
-                Manage editorial staff for Texas A&M's independent student newspaper.
-              </p>            
-            </div>
-
+            <a href="https://thebatt.com">
+              <div className="flex-row-div">
+                <img style={{ width: "60%", height: "20%"}} src="https://thebatt.com/wp-content/uploads/2024/01/Untitled-1-1.png" alt="The Battalion logo" />
+                <p style={{width: '40%'}}>
+                  <i>Managing Editor</i><br />
+                  Manage editorial staff for Texas A&M's independent student newspaper.
+                </p>            
+              </div>
+            </a>
         <div style={{ paddingTop: '20px'}}>
           <button id="download-resume-button" onClick={handleDownload}>Download Full Resume</button>
           <button id="download-transcript-button" onClick={handleDownloadTranscript}>Download Transcript</button>
